@@ -2,6 +2,7 @@
 verifica_user(){
 if [ "$(whoami)" != "root" ]; then
     echo "Por favor execute como root"
+    exit 1
 else
     echo "Bora la"
 fi
@@ -20,8 +21,7 @@ exit 1
 fi
 case "$VALOR" in
 	all)
-		verifica_user 
-        instala_flatpack
+       verifica_user && instala_flatpack	
   ;;
 esac
 exit 0
