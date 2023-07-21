@@ -1,4 +1,4 @@
-# Shell Lab
+# Shell Lab 🐧
 ---
 
 * Repositório contendo scripts para automatizar configuraçõs em sistemas baseados no Debian;
