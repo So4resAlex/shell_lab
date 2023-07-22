@@ -27,7 +27,7 @@ touch /home/"$NOME_USER"/.vimrc
 printf "set number\nset hlsearch\nset tabstop=2\nset softtabstop=2\nset expandtab\nset novisualbell\nset noerrorbells\nset ignorecase\nset bg=light\nset textwidth=79\nsyntax on" >> /home/"$NOME_USER"/.vimrc
 }
 manipula_bashrc(){
-printf "#Inicio das customizacoes/n" >> /home/$NOME_USER/.bashrc
-printf "alias cls='clear'/n" >> /home/$NOME_USER/.bashrc
-printf "eval "$(oh-my-posh init bash --config ~/.mytheme.omp.json)"" >> /home/$NOME_USER/.bashrc
+echo "#Inicio das customizacoes" >> /home/$NOME_USER/.bashrc
+echo "alias cls='clear'" >> /home/$NOME_USER/.bashrc
+echo "eval "$(oh-my-posh init bash --config ~/.mytheme.omp.json)"" >> /home/$NOME_USER/.bashrc
 }
