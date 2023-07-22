@@ -1,0 +1,33 @@
+verifica_user(){
+if [ "$(whoami)" != "root" ]; then
+    echo "Por favor execute como root"
+    exit 1
+else
+    echo "Bora la, primeira coisa, instalando curl"
+fi
+}
+instala_curl(){
+    apt-get install curl -y
+}
+instala_flatpack(){
+    apt-get update && apt-get upgrade -y
+    apt install flatpak -y
+    apt install gnome-software-plugin-flatpak
+    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    echo "Reinicie para finalizar a instalacao do flatpack"
+}
+install_oh_my_posh(){
+    curl -s https://ohmyposh.dev/install.sh | bash -s && \
+    curl -o /tmp/.mythemes.omp.json https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/M365Princess.omp.json && \
+    mv /tmp/.mythemes.omp.json /home/"$NOME_USER"/.mythemes.omp.json
+}
+instala_configura_vim(){
+apt-get install vim -y && \
+touch /home/"$NOME_USER"/.vimrc
+printf "set number\nset hlsearch\nset tabstop=2\nset softtabstop=2\nset expandtab\nset novisualbell\nset noerrorbells\nset ignorecase\nset bg=light\nset textwidth=79\nsyntax on" >> /home/"$NOME_USER"/.vimrc
+}
+manipula_bashrc(){
+printf "#Inicio das customizacoes/n" >> /home/$NOME_USER/.bashrc
+printf "alias cls='clear'/n" >> /home/$NOME_USER/.bashrc
+printf "eval "$(oh-my-posh init bash --config ~/.mytheme.omp.json)"" >> /home/$NOME_USER/.bashrc
+}
