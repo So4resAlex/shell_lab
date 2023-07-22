@@ -29,5 +29,5 @@ printf "set number\nset hlsearch\nset tabstop=2\nset softtabstop=2\nset expandta
 manipula_bashrc(){
 echo "#Inicio das customizacoes" >> /home/$NOME_USER/.bashrc
 echo "alias cls='clear'" >> /home/$NOME_USER/.bashrc
-echo "eval "$(oh-my-posh init bash --config ~/.mytheme.omp.json)"" >> /home/$NOME_USER/.bashrc
+echo 'eval "$(oh-my-posh init bash --config ~/.mytheme.omp.json)"' >> /home/$NOME_USER/.bashrc
 }
