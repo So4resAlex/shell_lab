@@ -8,8 +8,8 @@ NOME_USER=$2
 if [ -z "$VALOR" ]; then 
 echo "Especifique o primeiro argumento" 
 exit 1
-else [ -z "$NOME_USER" ]; then
-echo "Especifique o segundo argumento" 
+	if [ -z "$NOME_USER" ]; then
+		echo "Especifique o segundo argumento" 
 exit 2
 fi
 case "$VALOR" in
