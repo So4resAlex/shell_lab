@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. funcoes.sh
+. funcoes
 
 VALOR=$1
 NOME_USER=$2
