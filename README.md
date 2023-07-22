@@ -1,4 +1,4 @@
-# Shell Lab 🐧
+# Shell Lab 🐧 - EM DEV
 ---
 
 * Repositório contendo scripts para automatizar configuraçõs em sistemas baseados no Debian;
