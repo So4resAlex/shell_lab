@@ -19,6 +19,7 @@ Atualmente o scrip baixa e instala o Curl, Flatpack e o Oh-my-posh. O Oh-my-posh
 
 - [ ] Implementar cases para instalar recursos de maneira separada;
 - [ ] Criar função para intalação do git;
+- [ ]
 
 
 
