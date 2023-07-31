@@ -17,9 +17,7 @@ instala_flatpack(){
     echo "Reinicie para finalizar a instalacao do flatpack"
 }
 install_oh_my_posh(){
-    curl -s https://ohmyposh.dev/install.sh | bash -s && \
-    curl https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/M365Princess.omp.json | json_pp > /tmp/.mythemes.omp.json && \
-    mv /tmp/.mythemes.omp.json /home/"$NOME_USER"/.mythemes.omp.json
+    curl -s https://ohmyposh.dev/install.sh | bash -s
 }
 instala_configura_vim(){
 apt-get install vim -y && \
@@ -29,5 +27,5 @@ printf "set number\nset hlsearch\nset tabstop=2\nset softtabstop=2\nset expandta
 manipula_bashrc(){
 echo "#Inicio das customizacoes" >> /home/$NOME_USER/.bashrc
 echo "alias cls='clear'" >> /home/$NOME_USER/.bashrc
-echo 'eval "$(oh-my-posh init bash --config ~/.mythemes.omp.json)"' >> /home/$NOME_USER/.bashrc
+echo '#eval "$(oh-my-posh init bash --config ~/.mythemes.omp.json)"' >> /home/$NOME_USER/.bashrc
 }
