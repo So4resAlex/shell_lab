@@ -1,4 +1,4 @@
-## Descrição
+## Descrição 🐧
 
 O Shell Lab é um repositório contendo scripts para automatizar configurações em sistemas baseados no Debian. O foco principal é o estudo e desenvolvimento de "bibliotecas" de funções para reuso futuro, utilizando a estrutura de condicional `case`.
 
