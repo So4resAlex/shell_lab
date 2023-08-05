@@ -3,13 +3,15 @@ if [ "$(whoami)" != "root" ]; then
     echo "Por favor execute como root"
     exit 1
 else
-    echo "Bora la, primeira coisa, instalando curl"
+    echo "Bora lá"
 fi
 }
 instala_curl(){
+    echo "Instalando o curl"
     apt-get install curl -y
 }
 instala_flatpack(){
+    echo "Instalando o flatpack"
     apt-get update && apt-get upgrade -y
     apt install flatpak -y
     apt install gnome-software-plugin-flatpak
@@ -17,14 +19,17 @@ instala_flatpack(){
     echo "Reinicie para finalizar a instalacao do flatpack"
 }
 install_oh_my_posh(){
+    echo "Instalando o oh-my-posh"
     curl -s https://ohmyposh.dev/install.sh | bash -s
 }
 instala_configura_vim(){
+    echo "Instalando e configurando VIM"
     apt-get install vim -y && \
     touch /home/"$NOME_USER"/.vimrc
     printf "set number\nset hlsearch\nset tabstop=2\nset softtabstop=2\nset expandtab\nset novisualbell\nset noerrorbells\nset ignorecase\nset bg=light\nset textwidth=79\nsyntax on" >> /home/"$NOME_USER"/.vimrc
 }
 manipula_bashrc(){
+    echo "Adiciionando customizações no bashrc"
     echo "#Inicio das customizacoes" >> /home/$NOME_USER/.bashrc
     echo "alias cls='clear'" >> /home/$NOME_USER/.bashrc
     echo '#eval "$(oh-my-posh init bash --config ~/.mythemes.omp.json)"' >> /home/$NOME_USER/.bashrc
